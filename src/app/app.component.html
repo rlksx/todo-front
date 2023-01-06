@@ -1,8 +1,16 @@
 <h1>{{title}}</h1>
 <ol>
   <li *ngFor="let todo of todos">{{todo.title}} - 
-    <button *ngIf="!todo.done">Concluir</button> | 
-    <button *ngIf="todo.done">Refazer</button> |
+    <button *ngIf="!todo.done" (click)="MarkAsDone(todo)">Concluir</button> | 
+    <button *ngIf="todo.done" (click)="MarkAsUndone(todo)">Refazer</button> |
     <button (click)="remove(todo)" >Excluir</button> |
   </li>
 </ol>
+
+<form [formGroup]="form">
+  <fieldset>
+    <label>Tarefa</label>
+    <input type="text">
+    <button>Salvar</button>
+  </fieldset>
+</form>
