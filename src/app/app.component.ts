@@ -25,10 +25,7 @@ export class AppComponent {
         Validators.required,
       ])]
     });
-
-    // this.todos.push(new Todo(1, 'Arrumar o quarto', false))
-    // this.todos.push(new Todo(2, 'Estudar angular', false))
-    // this.todos.push(new Todo(3, 'Ir para faculdade', true))
+    this.loadLocalStorage();
   }
 
   add() {
@@ -37,6 +34,7 @@ export class AppComponent {
     this.todos.push(new Todo(id, title, false))
 
     this.clear();
+    this.saveLocalStorage();
   }
 
   clear() {
@@ -46,13 +44,27 @@ export class AppComponent {
   remove(todo: Todo) {
     const index = this.todos.indexOf(todo);
     if(index !== -1) this.todos.splice(index, 1);
+    this.saveLocalStorage();
   }
 
   MarkAsDone(todo:Todo) {
     todo.done = true;
+    this.saveLocalStorage();
+
   }
 
   MarkAsUndone(todo: Todo) {
     todo.done = false;
+    this.saveLocalStorage()
+  }
+
+  saveLocalStorage() {
+    const data = JSON.stringify(this.todos);
+    localStorage.setItem('todos', data);
+  }
+
+  loadLocalStorage() {
+    const data = localStorage.getItem('todos') || '[]';
+    this.todos = JSON.parse(data);
   }
 }
