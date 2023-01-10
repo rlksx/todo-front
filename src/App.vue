@@ -10,8 +10,7 @@
          <TodoForm />
 
          <!-- Todo items -->
-         <!-- <TodoItem /> -->
-         <!-- <TodoItems /> -->
+         <TodoItems />
 
          <!-- Todo empty -->
          <TodoEmpty />
@@ -21,7 +20,7 @@
 </template>
 
 <script>
-// import TodoItems from '@/components/TodoItems.vue';
+import TodoItems from '@/components/TodoItems.vue';
 import TodoForm from '@/components/TodoForm.vue';
 import TodoSpinner from '@/components/TodoSpinner.vue';
 // import TodoItem from '@/components/TodoItem.vue';
@@ -33,7 +32,7 @@ export default {
 
    components: {
       TodoSpinner,
-      // TodoItems,
+      TodoItems,
       TodoForm,
       // TodoItem,
       TodoEmpty
@@ -41,13 +40,14 @@ export default {
 
    data() {
       return {
-         todos: []
+
       }
    },
 
-   async created() {
-      this.todos = await axios.get('http://localhost:3000/todos')
-      .then((response) => response.data)
+   created() {
+      axios.get('http://localhost:3000/todos')
+         .then((response) => 
+         this.$store.commit('storeTodos', response.data))
    },
-};
+}
 </script>
