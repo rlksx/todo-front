@@ -10,10 +10,10 @@
             <TodoForm />
 
             <!-- Todo items -->
-            <TodoItems />
+            <TodoItems v-if="$store.state.todos.length"/>
 
             <!-- Todo empty -->
-            <TodoEmpty />
+            <TodoEmpty v-else/>
          </template>
       </div>
    </div>

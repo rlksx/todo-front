@@ -1,34 +1,3 @@
 {
-  "todos": [
-    {
-      "id": 1,
-      "title": "Estudar javascript",
-      "completed": true
-    },
-    {
-      "title": "Estudar Vue e Nuxt",
-      "completed": true,
-      "id": 2
-    },
-    {
-      "id": 3,
-      "title": "Estudar composition API",
-      "completed": true
-    },
-    {
-      "title": "Terminar o trabalho da faculade",
-      "completed": false,
-      "id": 4
-    },
-    {
-      "title": "Arrumar o curriculo",
-      "completed": false,
-      "id": 5
-    },
-    {
-      "title": "Fazer o almoço",
-      "completed": true,
-      "id": 6
-    }
-  ]
+  "todos": []
 }
