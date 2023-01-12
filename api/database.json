@@ -6,14 +6,14 @@
       "completed": true
     },
     {
-      "id": 2,
-      "title": "Estudar Vue",
-      "completed": false
+      "title": "Estudar Vue e Nuxt",
+      "completed": true,
+      "id": 2
     },
     {
       "id": 3,
       "title": "Estudar composition API",
-      "completed": false
+      "completed": true
     },
     {
       "title": "Terminar o trabalho da faculade",
@@ -27,7 +27,7 @@
     },
     {
       "title": "Fazer o almoço",
-      "completed": false,
+      "completed": true,
       "id": 6
     }
   ]
