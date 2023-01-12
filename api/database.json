@@ -1,19 +1,34 @@
 {
-    "todos": [
-      {
-        "id": 1,
-        "title": "Estudar javascript",
-        "completed": true
-      },
-      {
-        "id": 2,
-        "title": "Estudar Vue",
-        "completed": false
-      },
-      {
-        "id": 3,
-        "title": "Estudar composition API",
-        "completed": false
-      }
-    ]
-  }
+  "todos": [
+    {
+      "id": 1,
+      "title": "Estudar javascript",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Estudar Vue",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Estudar composition API",
+      "completed": false
+    },
+    {
+      "title": "Terminar o trabalho da faculade",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "title": "Arrumar meu curriculo",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "ksdfakjhdfdjadkjfhadkhfa",
+      "completed": false,
+      "id": 6
+    }
+  ]
+}
