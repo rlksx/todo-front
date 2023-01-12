@@ -29,11 +29,15 @@ export default {
 
    methods: {
       addTodo() {
-         this.$store.dispatch('addTodo', {
-            title: this.title,
-            completed: false
-         })
-      }
+         if (!this.title) return;
+
+         this.$store
+            .dispatch("addTodo", {
+               title: this.title,
+               completed: false,
+            })
+            .finally(() => (this.title = ""));
+      },
    },
 };
 </script>
