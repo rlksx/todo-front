@@ -1,6 +1,6 @@
 <template>
    <!-- Content -->
-   <div class="px-3 py-10 md:px-10">
+   <div class="px-3 py-10 md:px-10 pt-16">
       <div class="w-full sm:w-1/2 lg:w-1/3 mx-auto">
          <!-- Todo spinner -->
          <TodoSpinner v-if="loading" />
@@ -10,10 +10,10 @@
             <TodoForm />
 
             <!-- Todo items -->
-            <TodoItems v-if="$store.state.todos.length"/>
+            <TodoItems v-if="$store.state.todos.length" />
 
             <!-- Todo empty -->
-            <TodoEmpty v-else/>
+            <TodoEmpty v-else />
          </template>
       </div>
    </div>
@@ -46,9 +46,9 @@ export default {
 
    created() {
       this.loading = true
-        this.$store.dispatch('getTodos').finally(() => {
-            this.loading = false
-        })
+      this.$store.dispatch('getTodos').finally(() => {
+         this.loading = false
+      })
    },
 };
 </script>
